@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <input type="text" name="username" placeholder="Enter GitHub username" required>
+    <title>GitHub User Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>GitHub User Finder</h1>
+
+    <form method="POST">
+        <label>Enter GitHub Username:</label><br><br>
+
+        <input type="text" name="username" required>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    {% if user %}
+
+    <h2>User Details</h2>
+
+    <img src="{{ user.avatar_url }}" width="150">
+
+    <p><b>Name:</b> {{ user.name }}</p>
+    <p><b>Bio:</b> {{ user.bio if user.bio else "No bio available" }}</p>
+    <p><b>Username:</b> {{ user.login }}</p>
+    <p><b>Company:</b> {{ user.company if user.company else "Not Available" }}</p>
+    <p><b>Location:</b> {{ user.location if user.location else "Not Available" }}</p>
+    <p><b>Followers:</b> {{ user.followers }}</p>
+    <p><b>Following:</b> {{ user.following }}</p>
+    <p><b>Repositories:</b> {{ user.public_repos }}</p>
+    <p><b>Account Created:</b> {{ user.created_at }}</p>
+
+    <p>
+        <b>Profile:</b>
+        <a href="{{ user.html_url }}" target="_blank">
+            {{ user.html_url }}
+        </a>
+    </p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
