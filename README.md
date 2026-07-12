@@ -60,11 +60,12 @@ Profile URL: https://github.com/octocat
 
 ## Future Improvements
 
-* Display user bio
-* Display location
-* Display company
-* Display account creation date
-* Save results to a CSV file
+- Display user's repositories
+- Search history
+- Dark mode
+- Export user details to PDF or CSV
+- Responsive design for mobile devices
+
 
 ## Author
 
