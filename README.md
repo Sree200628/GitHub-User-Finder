@@ -2,71 +2,117 @@
 
 ## Project Overview
 
-GitHub User Finder is a simple Python project that fetches public GitHub user details using the GitHub REST API. The user enters a GitHub username, and the application displays the user's public profile information.
+GitHub User Finder is a Flask-based web application that uses the GitHub REST API to fetch and display public GitHub user profile information. Users can search for any public GitHub username and instantly view details such as profile picture, bio, company, location, followers, repositories, and profile link.
+
+---
 
 ## Features
 
-* Search any public GitHub user
-* Display user's name
-* Display username
-* Display followers count
-* Display following count
-* Display public repositories count
-* Display profile URL
-* Show **"User not found!"** for invalid usernames
+- Search any public GitHub user
+- Display profile picture
+- Display user's name
+- Display username
+- Display bio
+- Display company
+- Display location
+- Display followers count
+- Display following count
+- Display public repositories count
+- Display account creation date
+- Open GitHub profile using profile URL
+- Show **"User not found!"** for invalid usernames
+
+---
 
 ## Technologies Used
 
-* Python
-* Requests Library
-* GitHub REST API
+- Python
+- Flask
+- HTML
+- CSS
+- Requests Library
+- GitHub REST API
+
+---
 
 ## Project Structure
 
-```
+```text
 GitHub_User_Finder/
+│── app.py
 │── main.py
 │── requirements.txt
-└── README.md
+│── README.md
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    └── style.css
 ```
+
+---
 
 ## How to Run
 
-1. Clone or download the project.
-2. Install the required package:
+1. Clone the repository.
 
-```
+2. Install the required packages:
+
+```bash
 pip install -r requirements.txt
 ```
 
-3. Run the program:
+3. Run the Flask application:
 
-```
-python main.py
+```bash
+python app.py
 ```
 
-## Sample Output
+4. Open your browser and visit:
 
+```text
+http://127.0.0.1:5000
 ```
-Enter GitHub Username: octocat
 
-Name: The Octocat
-Username: octocat
-Followers: 23264
-Following: 9
-Public Repositories: 8
-Profile URL: https://github.com/octocat
+---
+
+## Project Workflow
+
+```text
+User
+   │
+   ▼
+Enter GitHub Username
+   │
+   ▼
+Click Search
+   │
+   ▼
+Flask Application
+   │
+   ▼
+GitHub REST API
+   │
+   ▼
+JSON Response
+   │
+   ▼
+Display User Details
 ```
+
+---
 
 ## Future Improvements
 
 - Display user's repositories
-- Search history
-- Dark mode
+- Add dark mode
+- Save search history
 - Export user details to PDF or CSV
-- Responsive design for mobile devices
+- Improve mobile responsiveness
 
+---
 
 ## Author
 
-Sreenithi B.
+**Sreenithi B.**
