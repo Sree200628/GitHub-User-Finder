@@ -4,8 +4,6 @@
 ## Project Overview
 
 GitHub User Finder is a Flask-based web application that uses the GitHub REST API to fetch and display public GitHub user profile information. Users can search for any public GitHub username and instantly view details such as profile picture, bio, company, location, followers, repositories, and profile link.
-<img width="647" height="922" alt="Screenshot 2026-07-12 221327" src="https://github.com/user-attachments/assets/0d254892-dc28-42b5-b8ef-4408edef58e6" />
----
 
 ## Features
 
